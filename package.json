@@ -38,14 +38,14 @@
   },
   "name": "ds-alurabooks-aj",
   "author": "arydiane jardim",
-  "module": "dist/ds-alurabooks-base.esm.js",
+  "module": "dist/ds-alurabooks-aj.esm.js",
   "size-limit": [
     {
-      "path": "dist/ds-alurabooks-base.cjs.production.min.js",
+      "path": "dist/ds-alurabooks-aj.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/ds-alurabooks-base.esm.js",
+      "path": "dist/ds-alurabooks-aj.esm.js",
       "limit": "10 KB"
     }
   ],
