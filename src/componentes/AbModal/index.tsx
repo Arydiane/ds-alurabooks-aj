@@ -10,6 +10,7 @@ export interface AbModalProps {
 
 const FundoModal = styled.div`
     position: fixed;
+    padding: 64px;
     left: 0px;
     right: 0px;
     top: 0px;
