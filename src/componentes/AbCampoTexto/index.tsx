@@ -10,7 +10,7 @@ const LabelEstilizada = styled.label<{ darkmode: boolean }>`
     margin-left: 16px;
     margin-bottom: 8px;
 `
-const InputEstilizado = styled.input<{ placeholderAlign: string, darkmode: boolean }>`
+const InputEstilizado = styled.input<{ placeholderalign: string, darkmode: boolean }>`
     font-size: 16px;
     line-height: 24px;
     padding: 8px 24px;
@@ -23,7 +23,7 @@ const InputEstilizado = styled.input<{ placeholderAlign: string, darkmode: boole
         outline: none;
     }
     background: ${(props) => props.darkmode ? 'transparent' : '#FFF'};
-    text-align: ${(props) => props.placeholderAlign};
+    text-align: ${(props) => props.placeholderalign};
     ::placeholder, 
     ::-webkit-input-placeholder {
         color: ${(props) => props.darkmode ? '#FFF' : '#002F52'}; 
@@ -32,7 +32,7 @@ const InputEstilizado = styled.input<{ placeholderAlign: string, darkmode: boole
 export interface AbCampoTextoProps {
     label?: string; 
     placeholder?: string;
-    placeholderAlign: 'left' | 'center' | 'right';
+    placeholderalign: 'left' | 'center' | 'right';
     value: string;
     type?: 'text' | 'email' | 'password' | 'date';
     onChange: (value: string) => void
@@ -45,7 +45,7 @@ export const AbCampoTexto = ({
         onChange, 
         type = 'text', 
         placeholder = "", 
-        placeholderAlign = 'left', 
+        placeholderalign = 'left', 
         darkmode = false 
     } : AbCampoTextoProps) => {
     return (
@@ -55,7 +55,7 @@ export const AbCampoTexto = ({
              </LabelEstilizada>}
             <InputEstilizado 
                 placeholder={placeholder} 
-                placeholderAlign={placeholderAlign} 
+                placeholderalign={placeholderalign} 
                 darkmode={darkmode} 
                 type={type}  
                 value={value} 
