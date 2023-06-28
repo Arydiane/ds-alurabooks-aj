@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React from "react";
 import styled from 'styled-components';
 
 const ContainerEstilizado = styled.div`
@@ -43,7 +43,6 @@ export interface AbInputQuantidadeProps {
 }
 
 export const AbInputQuantidade = ({ onChange, value } : AbInputQuantidadeProps) => {
-   
     return (
         <ContainerEstilizado>
             <LabelEstilizada>Quantidade</LabelEstilizada>
