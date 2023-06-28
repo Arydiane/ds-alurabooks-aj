@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ComponentMeta, ComponentStory } from "@storybook/react"; 
 import { AbInputQuantidade, AbInputQuantidadeProps } from "../src/componentes/AbInputQuantidade"
 
@@ -8,9 +8,9 @@ export default {
     parameters: { action: { argTypesRegex: '^on.*'}},
 } as ComponentMeta<typeof AbInputQuantidade>
 
-const Template: ComponentStory<typeof AbInputQuantidade> = (args) => <AbInputQuantidade {...args} />
+const Template: ComponentStory<typeof AbInputQuantidade> = () => {
+    const [value, setValue] = useState(3)
+    return <AbInputQuantidade value={value}  onChange={setValue} />
+}
 
-export const AbInputQuantidadeComponent = Template.bind({})
-AbInputQuantidadeComponent.args = {
-   label: "Label de quantidade"
-} as AbInputQuantidadeProps
+export const Padrao = Template.bind({})

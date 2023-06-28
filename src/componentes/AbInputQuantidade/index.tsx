@@ -38,25 +38,19 @@ const SpanEstilizado = styled.span`
     font-family: Arial, Helvetica, sans-serif;
 `
 export interface AbInputQuantidadeProps {
-    onChange?: (value: number) => void
+    onChange: (value: number) => void
+    value: number
 }
 
-export const AbInputQuantidade = ({ onChange } : AbInputQuantidadeProps) => {
-    const [valor, setValor] = useState(1)
-
-    useEffect(() => {
-        if (onChange) {
-            onChange(Number(valor))
-        }
-    }, [valor])
-
+export const AbInputQuantidade = ({ onChange, value } : AbInputQuantidadeProps) => {
+   
     return (
         <ContainerEstilizado>
             <LabelEstilizada>Quantidade</LabelEstilizada>
             <FlexContainerEstilizado>
-                <BotaoEstilizado onClick={() => setValor(prev => prev - 1)}>-</BotaoEstilizado>
-                <SpanEstilizado>{valor}</SpanEstilizado>
-                <BotaoEstilizado onClick={() => setValor(prev => prev + 1)}>+</BotaoEstilizado>
+                <BotaoEstilizado onClick={() => onChange(value - 1)}>-</BotaoEstilizado>
+                <SpanEstilizado>{value}</SpanEstilizado>
+                <BotaoEstilizado onClick={() => onChange(value + 1)}>+</BotaoEstilizado>
             </FlexContainerEstilizado>
         </ContainerEstilizado>
     )
